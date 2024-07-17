@@ -1,0 +1,22 @@
+.logo {
+    margin-right: 15px;
+    height: 40px;
+    display: inline;
+  }
+  
+  li {
+    filter: grayscale(150%);
+    cursor: pointer;
+  }
+  
+  li:hover {
+    filter: none;
+  }
+  
+  .elifImage {
+    width: auto;
+    height: auto;
+    margin: auto;
+    object-fit: fill;
+  }
+  
