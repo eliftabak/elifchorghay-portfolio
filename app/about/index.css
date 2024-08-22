@@ -4,7 +4,7 @@
     display: inline;
   }
   
-  li {
+  li.tech-stack {
     filter: grayscale(150%);
     cursor: pointer;
   }

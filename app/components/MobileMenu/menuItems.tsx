@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-const Menu = () => {
+const MenuItems = () => {
   const [isActive, setIsActive] = useState(false);
   const [scrolling, setScrolling] = useState(false);
   const pathname = usePathname();
@@ -64,4 +64,4 @@ const Menu = () => {
   );
 };
 
-export default Menu;
+export default MenuItems;

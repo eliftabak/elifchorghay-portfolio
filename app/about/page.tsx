@@ -1,25 +1,24 @@
 import Image from 'next/image';
 import './index.css';
-import BlurImage from '../components/blurImage';
 
 const AboutPage = () => {
   return (
     <>
       <main className="about">
         <div className="contain-md my-8 md:my-16">
-        <BlurImage
+        <Image
             className="elifImage"
             src="/images/elifchorghay.jpg"
             alt="Elif Chorghay"
             height={100}
-            width={400}
+            width={600}
           />
         </div>
         <div className="contain-sm">
           <h1 className="flex items-center text-3xl md:text-4xl lg:text-5xl">
             Hi!
             <span className="w-14 mx-3">
-              <BlurImage
+              <Image
                 src='/images/wave.png'
                 alt="wave"
                 width={50}
@@ -41,21 +40,21 @@ const AboutPage = () => {
             <h2 className="text-xl md:text-3xl mb-4">My Go-To Stack</h2>
             <ul className="flex flex-wrap md:text-lg text-mdgray">
               {[
-                { src: '/images/Favorites/next-js.png', alt: 'NextJS', name: 'NextJS' },
-                { src: '/images/Favorites/react.png', alt: 'React', name: 'React' },
-                { src: '/images/Favorites/typescript.png', alt: 'Typescript', name: 'Typescript' },
-                { src: '/images/Favorites/javascript.png', alt: 'JavaScript', name: 'JavaScript' },
-                { src: '/images/Favorites/redux.png', alt: 'Redux', name: 'Redux' },
-                { src: '/images/Favorites/nodejs.png', alt: 'Node.js', name: 'Node.js' },
-                { src: '/images/Favorites/mysql.png', alt: 'MySQL', name: 'MySQL' },
-                { src: '/images/Favorites/mongo.png', alt: 'MongoDB', name: 'MongoDB' },
-                { src: '/images/Favorites/tailwind.png', alt: 'Tailwind CSS', name: 'Tailwind CSS' },
-                { src: '/images/Favorites/bootstrap.png', alt: 'Bootstrap', name: 'Bootstrap' },
-                { src: '/images/Favorites/material-ui.png', alt: 'Material UI', name: 'Material UI' },
+                { src: '/images/tech/next-js.png', alt: 'NextJS', name: 'NextJS' },
+                { src: '/images/tech/react.png', alt: 'React', name: 'React' },
+                { src: '/images/tech/typescript.png', alt: 'Typescript', name: 'Typescript' },
+                { src: '/images/tech/javascript.png', alt: 'JavaScript', name: 'JavaScript' },
+                { src: '/images/tech/redux.png', alt: 'Redux', name: 'Redux' },
+                { src: '/images/tech/nodejs.png', alt: 'Node.js', name: 'Node.js' },
+                { src: '/images/tech/mysql.png', alt: 'MySQL', name: 'MySQL' },
+                { src: '/images/tech/mongo.png', alt: 'MongoDB', name: 'MongoDB' },
+                { src: '/images/tech/tailwind.png', alt: 'Tailwind CSS', name: 'Tailwind CSS' },
+                { src: '/images/tech/bootstrap.png', alt: 'Bootstrap', name: 'Bootstrap' },
+                { src: '/images/tech/material-ui.png', alt: 'Material UI', name: 'Material UI' },
               ].map((tech, i) => (
-                <li key={i} className="w-1/3 p-4">
+                <li key={i} className="w-1/3 p-4 tech-stack">
                   <div>
-                    <BlurImage src={tech.src} alt={tech.alt} width={40} height={40} className="logo" />
+                    <Image src={tech.src} alt={tech.alt} width={40} height={40} className="logo" />
                     <span>{tech.name}</span>
                   </div>
                 </li>

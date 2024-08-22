@@ -1,5 +1,3 @@
-
-
 const Footer = () => (
   <footer className="bg-gray-100 py-24 mt-40">
     <div className="contain">

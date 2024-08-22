@@ -6,7 +6,7 @@ const Projects = () => {
     <div>
       {projectsData.map((project, index) => (
         <div key={index} className={`${project.bgColor} mb-12 relative overflow-hidden rounded transform transition duration-150 ease-in-out hover:scale-105 shadow-inner`}>
-          <div className="md:w-7/12 lg:w-6/12 p-10 md:p-24">
+          <div className="md:w-7/12 lg:w-12/12 p-10 md:p-24">
             <h3 className="text-xl md:text-3xl">{project.title}</h3>
             <p className="text-mdgray my-4">{project.description}</p>
             <ul className="flex mb-4 text-mdgray text-sm">
@@ -60,7 +60,7 @@ const Projects = () => {
             </div>
           </div>
           <div className="hidden md:block absolute bottom-0 right-0 md:w-8/12 lg:w-7/12 h-62 sm:-mb-16 md:-mr-40 lg:-mb-16 lg:-mr-20">
-            <Image src={project.image} alt={project.title} layout="fill" objectFit="cover" />
+            <Image src={project.image} alt={project.title} width={600} height={400} />
           </div>
         </div>
       ))}

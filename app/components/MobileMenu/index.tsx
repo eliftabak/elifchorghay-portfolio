@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-const Header = () => {
+const MobileMenu = () => {
   const [isActive, setIsActive] = useState(false);
   const [useClass, setUseClass] = useState('');
   const pathname = usePathname();
@@ -50,7 +50,7 @@ const Header = () => {
   }, [isActive]);
 
   return (
-    <header className={`sticky top-0 z-50 bg-white py-6 ${scrolling ? 'border-b border-border mt-0' : 'mt-4'}`}>
+    <header className={`sticky top-0 z-50 bg-white py-6 ${scrolling ? 'border-b border-border mt-0' : 'mt-4'} lg:hidden`}>
       <div className="contain flex items-center justify-between">
         <Link href="/" className={`font-heading text-xl tracking-wider z-50 transition-colors duration-300 ${isActive ? 'text-white' : 'text-primary'}`}>
           Elif Chorghay
@@ -68,15 +68,19 @@ const Header = () => {
         </div>
         <nav className={`${useClass} fixed top-0 left-0 w-full h-full z-40`} style={{ backgroundColor: '#ce6565' }}>
           <div className="menu mt-32 contain flex flex-col font-heading text-3xl tracking-wider items-end">
+            {/* @ts-ignore */}
             <Link href="/" className={`mb-8 hover:text-white ${pathname === '/' ? 'text-white active' : 'text-offgray'}`} onClick={isActive ? toggleMobileMenu : null}>
               Home
             </Link>
+            {/* @ts-ignore */}
             <Link href="/about" className={`mb-8 hover:text-white ${pathname === '/about' ? 'text-white active' : 'text-offgray'}`} onClick={isActive ? toggleMobileMenu : null}>
               About
             </Link>
+            {/* @ts-ignore */}
             <Link href="/contact" className={`mb-8 hover:text-white ${pathname === '/contact' ? 'text-white active' : 'text-offgray'}`} onClick={isActive ? toggleMobileMenu : null}>
               Contact
             </Link>
+            {/* @ts-ignore */}
             <a className="mb-8 text-offgray hover:text-white" href={'/ElifsResume.pdf'} target="_blank" rel="noopener noreferrer" onClick={isActive ? toggleMobileMenu : null}>
               Resume
             </a>
@@ -87,4 +91,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default MobileMenu;
