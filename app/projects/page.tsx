@@ -1,4 +1,10 @@
 import Projects from "../components/Projects";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Elif Chorghay &mdash; Web Developer based in Karlsruhe, Germany.',
+  description: 'Projects I have built as a web developer.',
+}
 
 const ProjectsPage = () => {
   return (

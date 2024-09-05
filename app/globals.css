@@ -1,5 +1,5 @@
-@import url('https://rsms.me/inter/inter.css');
-@import url('https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap');
+@import url("https://rsms.me/inter/inter.css");
+@import url("https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap");
 
 @tailwind base;
 
@@ -37,12 +37,15 @@ h6 {
   0% {
     left: 0;
   }
+
   20% {
     left: 10px;
   }
+
   40% {
     left: 0;
   }
+
   100% {
     left: 0;
   }
@@ -62,8 +65,8 @@ p {
   @apply leading-normal;
 }
 
-form[name='contact'] input,
-form[name='contact'] textarea {
+form[name="contact"] input,
+form[name="contact"] textarea {
   background-color: #f6f6f6;
   border-color: #f6f6f6;
 }
@@ -106,7 +109,7 @@ body {
 }
 
 .line::after {
-  content: '';
+  content: "";
   width: 340px;
   height: 1px;
   background-color: white;
@@ -117,6 +120,7 @@ body {
   from {
     transform: translateY(-100%);
   }
+
   to {
     transform: translateY(0%);
   }
@@ -126,6 +130,7 @@ body {
   from {
     transform: translateY(0%);
   }
+
   to {
     transform: translateY(100%);
   }
@@ -136,6 +141,7 @@ body {
     opacity: 0;
     transform: translateY(100px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0px);
@@ -159,7 +165,7 @@ header a.text-primary:after {
 }
 
 header a:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -182,6 +188,7 @@ header nav {
   z-index: 1;
   @apply bg-primary;
 }
+
 header nav.active {
   display: block;
   visibility: visible;
@@ -189,10 +196,12 @@ header nav.active {
   animation-fill-mode: both;
   animation-play-state: running;
 }
+
 header nav.active .menu {
   animation: showMenu 0.4s ease both;
   animation-delay: 0.4s;
 }
+
 header nav.hidden {
   display: block;
   transform: translateY(-100%);
@@ -217,12 +226,66 @@ header nav.hidden {
   transform: rotate(-45deg) translate(-4px, 6px);
   background-color: white;
 }
-.hamburger.active div:first-of-type + div {
+
+.hamburger.active div:first-of-type+div {
   width: 0;
   opacity: 0;
 }
+
 .hamburger.active div:last-of-type {
   transform: rotate(45deg) translate(-4px, -6px);
   width: 24px;
   background-color: white;
+}
+
+/* Rich-content Styles */
+.rich-text p {
+  margin-bottom: 1.5rem;
+}
+
+.rich-text h1,
+.rich-text h2,
+.rich-text h3,
+.rich-text h4,
+.rich-text h5,
+.rich-text h6 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.rich-text a {
+  color: #1a73e8;
+  text-decoration: underline;
+}
+
+.rich-text ul,
+.rich-text ol {
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.rich-text li {
+  margin-bottom: 0.5rem;
+}
+
+.rich-text p,
+.rich-text ul,
+.rich-text ol {
+  line-height: 1.7;
+}
+
+
+pre {
+  background-color: #f5f5f5; /* Light gray background */
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto; /* Enable scrolling for long lines */
+  margin-bottom: 1.5rem;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+  color: #e83e8c; /* Code text color */
+  font-size: 14px;
+  white-space: pre-wrap; /* Ensure line breaks are respected */
 }

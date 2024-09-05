@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import React from "react";
 import { fetchBlogPosts, BlogPost } from "@/lib/contentful";
+
+export const metadata: Metadata = {
+	title: "Web Dev Insights by Elif Chorghay | Frontend, JavaScript, and React",
+	description:
+		"Discover articles on web development, JavaScript, React, and more.",
+};
 
 export default async function Blog() {
 	const posts: BlogPost[] = await fetchBlogPosts();

@@ -66,12 +66,10 @@ export const fetchBlogPosts = async (): Promise<BlogPost[]> => {
 
 	if (!response.ok) {
 		const errorDetails = await response.json();
-		console.error("Error details:", errorDetails);
 		throw new Error("Failed to fetch data from Contentful");
 	}
 
 	const { data } = await response.json();
-	console.log("data", data?.blogsCollection.items);
 
 	return data?.blogsCollection.items || [];
 };
