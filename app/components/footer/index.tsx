@@ -2,7 +2,7 @@ const Footer = () => (
   <footer className="bg-gray-100 py-24 mt-40">
     <div className="contain">
       <div className="flex justify-between items-center text-mdgray">
-        <p>© {new Date().getFullYear()} Elif Chorghay</p>
+        <p>© {new Date().getFullYear()}</p>
         <div>
           <a className="mr-10" href="https://github.com/eliftabak" target="_blank" rel="noopener noreferrer">
             Github
