@@ -4,7 +4,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import Image from "next/image";
 import Head from "next/head";
-import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, AwaitedReactNode } from "react";
+import { ReactNode } from 'react';
 
 interface BlogDetailProps {
   params: {
@@ -12,16 +12,36 @@ interface BlogDetailProps {
   };
 }
 
+const renderInlineCode = (text: ReactNode) => {
+  return <code className="bg-gray-100 p-1 rounded-md">{text}</code>;
+};
+
+
+const renderCodeBlock = (text: string) => (
+  <pre className="bg-gray-100 p-4 rounded-md overflow-x-auto">
+    <code>{text}</code>
+  </pre>
+);
+
+const renderParagraph = (node: any, children: ReactNode) => {
+  const isCodeParagraph = node.content.some(
+    (child: any) => child.marks?.some((mark: any) => mark.type === 'code')
+  );
+
+  if (isCodeParagraph) {
+    return renderCodeBlock(children as string);
+  }
+
+  return <p>{children}</p>;
+};
+
+
 const options = {
   renderMark: {
-    [MARKS.CODE]: (text : string) => {
-      return <pre><code className="bg-gray-100 p-1 rounded-md">{text}</code></pre>;
-    },
+    [MARKS.CODE]: renderInlineCode, // Handles inline code
   },
   renderNode: {
-    [BLOCKS.PARAGRAPH]: (node: any, children: any) => {
-      return <p>{children}</p>;
-    },
+    [BLOCKS.PARAGRAPH]: renderParagraph, // Handles paragraphs and code blocks
   },
 };
 

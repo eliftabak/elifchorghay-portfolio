@@ -84,6 +84,10 @@ const MobileMenu = () => {
             <a className="mb-8 text-offgray hover:text-white" href={'/ElifsResume.pdf'} target="_blank" rel="noopener noreferrer" onClick={isActive ? toggleMobileMenu : null}>
               Resume
             </a>
+            {/* @ts-ignore */}
+            <Link href="/blog" className={`mb-8 hover:text-white ${pathname === '/contact' ? 'text-white active' : 'text-offgray'}`} onClick={isActive ? toggleMobileMenu : null}>
+              Blog
+            </Link>
           </div>
         </nav>
       </div>
