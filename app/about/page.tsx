@@ -25,10 +25,10 @@ const AboutPage = () => {
 					<span className="w-14 mx-3">
 						<Image src="/images/wave.png" alt="wave" width={50} height={50} />
 					</span>
-					I'm Elif Chorghay.
+					I&apos;m Elif Chorghay.
 				</h1>
 				<p className="text-mdgray my-8 md:text-lg">
-					Welcome! I'm Elif, a Web Developer with a specialized focus in fintech
+					Welcome! I&apos;m Elif, a Web Developer with a specialized focus in fintech
 					and e-commerce. My career is dedicated to creating web applications
 					that are not only efficient but also intuitively user-centric. I
 					possess a deep understanding of technologies such as React, Next.js,
