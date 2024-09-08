@@ -1,5 +1,6 @@
-const Footer = () => (
-  <footer className="bg-gray-100 py-24 mt-40">
+const Footer = () => {
+  return (
+    <footer className="bg-gray-100 py-24 mt-40">
     <div className="contain">
       <div className="flex justify-between items-center text-mdgray">
         <p>© {new Date().getFullYear()}</p>
@@ -14,6 +15,7 @@ const Footer = () => (
       </div>
     </div>
   </footer>
-);
+  );
+};
 
 export default Footer;
