@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import projectsData from '../../data/projectsData';
 
-const Projects = () => {
+const ProjectsList = () => {
   return (
     <div>
       {projectsData.map((project, index) => (
@@ -68,4 +68,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default ProjectsList;

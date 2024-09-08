@@ -1,4 +1,4 @@
-import Projects from "../components/Projects";
+import ProjectsList from "../components/ProjectsList";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   description: 'Projects I have built as a web developer.',
 }
 
-const ProjectsPage = () => {
+const Projects = () => {
   return (
     <section className="contain mt-14">
       <h2 className="text-2xl md:text-4xl mb-8">Some Things I&apos;ve Built</h2>
-      <Projects />
+      <ProjectsList />
     </section>
   );
 }
 
-export default ProjectsPage;
+export default Projects;
