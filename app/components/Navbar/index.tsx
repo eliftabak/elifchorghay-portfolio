@@ -21,11 +21,11 @@ const Navbar = () => {
             <Link href="/about" className={`navbar-item ${isActive("/about") ? "text-gray-600 font-bold border-b" : ""}`}>
               About
             </Link>
-            <Link href="/projects" className={`navbar-item ${isActive("/projects") ? "text-gray-600 font-bold border-b" : ""}`}>
-              Projects
-            </Link>
             <Link href="/contact" className={`navbar-item ${isActive("/contact") ? "text-gray-600 font-bold border-b" : ""}`}>
               Contact
+            </Link>
+            <Link href="/projects" className={`navbar-item ${isActive("/projects") ? "text-gray-600 font-bold border-b" : ""}`}>
+              Projects
             </Link>
             <Link href="/blog" className={`navbar-item ${isActive("/blog") ? "text-gray-600 font-bold border-b" : ""}`}>
               Blog
