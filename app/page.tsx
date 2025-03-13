@@ -3,9 +3,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Web Dev Insights by Elif Chorghay | Frontend, JavaScript, and React",
+	title: "Elif Chorghay | Web Developer in Karlsruhe, Germany | Frontend, JavaScript, and React",
 	description:
-		"Discover articles on web development, JavaScript, React, and more.",
+		"Experienced Web Developer Specializing in Fintech and E-commerce Solutions & Creating Intuitive, High-Performance Web Applications.",
 };
 
 export default function Home() {
