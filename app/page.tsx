@@ -11,14 +11,14 @@ export const metadata: Metadata = {
 export default function Home() {
 	return (
 		<section className="contain mb-32 md:mb-24 md:mt-20">
-			<div className="inline-block bg-green-100 rounded px-4 py-2 mb-8 shadow-inner">
+			{/* <div className="inline-block bg-green-100 rounded px-4 py-2 mb-8 shadow-inner">
 					<div className="flex items-center">
 						<div className="h-2 w-2 bg-green-500 rounded-full mr-4" />
 						<span className="text-sm md:text-base text-green-500">
 							Open to new opportunities.
 						</span>
 					</div>
-				</div>
+				</div> */}
 			<h1 className="text-3xl md:text-5xl">
 				Elif Chorghay &mdash; Web Developer based in Karlsruhe, Germany.
 			</h1>
